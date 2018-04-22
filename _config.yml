@@ -15,7 +15,6 @@
 # in the templates via {{ site.myvariable }}.
 lang: en-US
 title: Leonel Galán
-email: leonel.galan@epifany.com
 description: Software Developer
 baseurl: "/"  # the subpath of your site, e.g. /blog
 url: "http://leonelgalan.com"  # the base hostname & protocol for your site, e.g. http://example.com
