@@ -17,7 +17,7 @@ mkdir _site
 git clone https://${GH_TOKEN}@github.com/leonelgalan/site.git --branch gh-pages _site
 
 # build with Jekyll into "_site"
-bundle exec jekyll build
+bundle exec jekyll build --future
 
 # push
 cd _site
