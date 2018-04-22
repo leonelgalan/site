@@ -2,7 +2,7 @@
 layout: page
 title: About Me
 permalink: /about/
-image: /assets/images/gerson-cifuentes-595149-unsplash.jpg
+image: assets/images/gerson-cifuentes-561957-unsplash.jpg
 ---
 
 Software Developer. [Ruby on Rails](http://rubyonrails.org/) and
@@ -37,6 +37,6 @@ contributions [here](/os).
 ___
 
 <small>
-  Photo by [Gerson Cifuentes](https://unsplash.com/photos/HmZCtvtS6ds) | "My
-  grandmother always coffee, her hardworking hands represent this."
+  Photo by [Gerson Cifuentes](https://unsplash.com/photos/W1VqcpcnSHk) |
+  Tajumulco, Guatemala
 </small>
