@@ -8,7 +8,7 @@ tags: whats-new
 
 Epifany recently hired a couple of Data Scientists. I decided to learn enough R
 and Python to be dangerous. I've always wanted to say that. The truth is, I'm
-getting familiar with the two ecosystems to deploy solutions when needed.
+just getting familiar with the two ecosystems to better support my team.
 
 ## R
 ### Learning Resources
