@@ -93,7 +93,7 @@ collaborate back to the projects that save me time and/or make my job easier.
 - [#23 Adds memcached](https://github.com/smashingboxes/taperole/pull/23): Added features
 - [#32 Remove vendored roles from Repository](https://github.com/smashingboxes/taperole/pull/32): Cleanup
 - [#36 Dont Install node.js from source](https://github.com/smashingboxes/taperole/pull/36): Major Rewrite
-- [#38 Chore/fix vagrant](Chore/fix vagrant): Cleanup/improves dev tools
+- [#38 Chore/fix vagrant](https://github.com/smashingboxes/taperole/pull/38): Cleanup/improves dev tools
 - [#42 Installer updates](https://github.com/smashingboxes/taperole/pull/42): API Changes
 
 #### leonelgalan/ansible-node
