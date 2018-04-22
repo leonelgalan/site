@@ -1,6 +1,7 @@
 ---
 layout: page
-title: About Me
+title: About
+alt_title: About Me
 permalink: /about/
 image: assets/images/gerson-cifuentes-561957-unsplash.jpg
 ---
