@@ -67,7 +67,7 @@ collaborate back to the projects that save me time and/or make my job easier.
 
 ### binarylogic/settingslogic
 
-- [#63 Adds an environment_vars_fallback to the Settingslogic class](https://github.com/binarylogic/settingslogic/pull/63): Closed, author recommened other gem that already had the feature I was proposing.
+- [#63 Adds an environment_vars_fallback to the Settingslogic class](https://github.com/binarylogic/settingslogic/pull/63): Closed, author recommended other gem that already had the feature I was proposing.
 
 ## Developer Tools
 
