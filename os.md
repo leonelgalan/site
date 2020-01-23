@@ -75,7 +75,7 @@ collaborate back to the projects that save me time and/or make my job easier.
 
 > Observable is the magic notebook for exploring data and thinking with code.
 
-Some of my best Javascript experiments are hosted here as [Observable Nontebooks](https://observablehq.com/@leonelgalan). Including:
+Some of my best Javascript experiments are hosted here as [Observable Notebooks](https://observablehq.com/@leonelgalan). Including:
 
 * A [US-Canada Map](https://observablehq.com/@leonelgalan/us-canada-map) with GeoJSON
 * A [Multi-Hued Color Scale](https://observablehq.com/@leonelgalan/multi-hued-color-scales) generator using D3.
