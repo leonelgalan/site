@@ -12,6 +12,7 @@ t:
   site_search: "Site Search"
   results_found: "Result(s) found"
   search_placeholder_text: "Enter your search term..."
+  search_full_content: true
   home: "Home"
   newer: "Newer"
   older: "Older"
