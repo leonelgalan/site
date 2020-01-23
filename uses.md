@@ -18,7 +18,7 @@ had to relearn some shortcuts and re-discover extensions, but ultimately I've be
 * Theme: [Material Theme Palenight](https://github.com/material-theme/vsc-material-theme)
 * Font : [Victor Mono](https://rubjo.github.io/victor-mono/) with Ligatures (`"editor.fontLigatures": true`)
 * Extensions:
-  * [Bracket Pair Colorizer])(https://github.com/CoenraadS/BracketPair)
+  * [Bracket Pair Colorizer](https://github.com/CoenraadS/BracketPair)
   * [Material Icon Theme](https://github.com/PKief/vscode-material-icon-theme)
   * [Import Cost](https://github.com/wix/import-cost)
 
