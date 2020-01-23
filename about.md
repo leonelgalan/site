@@ -6,9 +6,9 @@ permalink: /about/
 image: assets/images/gerson-cifuentes-561957-unsplash.jpg
 ---
 
-Software Developer. [Ruby on Rails](http://rubyonrails.org/) and
-[React](https://reactjs.org) enthusiast. Director of Technology at
-[Epifany](http://epifany.com/) & [Stealz](https://web.getstealz.com/).
+Software Developer. [Ruby on Rails](http://rubyonrails.org/),
+[React](https://reactjs.org) and Python enthusiast. Director of Technology at
+[Epifany](http://epifany.com/).
 
 ![Leonel](/assets/images/leonel.jpg){: .align-center}
 
