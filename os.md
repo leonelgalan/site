@@ -71,7 +71,13 @@ collaborate back to the projects that save me time and/or make my job easier.
 
 ## Javascript
 
-## Observable
+### [leonelgalan/asdfjkl](https://github.com/leonelgalan/asdfjkl)
+
+> Determines if text contains gibberish.
+
+I publish my first package to [NPM](https://www.npmjs.com/package/asdfjkl)
+
+### Observable
 
 > Observable is the magic notebook for exploring data and thinking with code.
 
@@ -81,7 +87,7 @@ Some of my best Javascript experiments are hosted here as [Observable Notebooks]
 * A [Multi-Hued Color Scale](https://observablehq.com/@leonelgalan/multi-hued-color-scales) generator using D3.
 * An experiment [embedding web fonts into SVGs](https://observablehq.com/@leonelgalan/embedding-fonts-into-an-svg)
 
-## Other Repl
+#### Other Repl
 
 * [CodePen](https://codepen.io/leonelgalan)
 * [Runkit](https://runkit.com/leonelgalan)
