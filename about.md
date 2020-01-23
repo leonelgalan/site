@@ -20,7 +20,7 @@ studied Computer Science at
 [North Carolina State University](https://www.ncsu.edu/).
 
 I've been working with Ruby on Rails and JavaScript for the last
-{{ site.time | date: "%Y" | minus: 2011 }} years. While doing consulting, I
+{{ site.time | date: "%Y" | minus: 2010 }} years. While doing consulting, I
 lead a team of talented developers that built dozens of web and mobile Apps for
 clients of all sizes. Nowadays, I get to focus on our own products, be more
 involved with every aspect, and explore newer trends and technologies.
