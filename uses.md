@@ -8,12 +8,13 @@ image: assets/images/todd-quackenbush-IClZBVw5W5A-unsplash.jpg
 {% assign purchaseDate = "October 29, 2013" | date: "%s" %}
 
 ## Computer
+
 MacBook Pro (Retina, 13-inch, Late 2013, ~{{ "now" | date: "%s" | minus: purchaseDate | divided_by: 3600 | divided_by: 24 | divided_by: 365.0 | round }} years old) on macOS Catalina.
 
 ## Editor
 
-A long time [Atom](https://atom.io/) user, I've been experimenting with **[VS Code](https://code.visualstudio.com/)**. I've
-had to relearn some shortcuts and re-discover extensions, but ultimately I've been pleased with the exprience.
+A long time [Atom](https://atom.io/) user, I've been experimenting with **[VS Code](https://code.visualstudio.com/)** lately. I've
+had to relearn some shortcuts and find new extensions, but ultimately I've been pleased with the experience.
 
 * Theme: [Material Theme Palenight](https://github.com/material-theme/vsc-material-theme)
 * Font : [Victor Mono](https://rubjo.github.io/victor-mono/) with Ligatures (`"editor.fontLigatures": true`)

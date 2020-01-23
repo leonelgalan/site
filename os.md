@@ -119,7 +119,7 @@ Some of my best Javascript experiments are hosted here as [Observable Notebooks]
 
 > Fairly full featured Ansible role for Postgresql.
 
-* [#62 Merges user privilages into correct role](https://github.com/ANXS/postgresql/pull/62): Fixed regression
+* [#62 Merges user privileges into correct role](https://github.com/ANXS/postgresql/pull/62): Fixed regression
 
 #### smashingboxes/taperole
 
@@ -127,7 +127,7 @@ Some of my best Javascript experiments are hosted here as [Observable Notebooks]
 
 * [#23 Adds memcached](https://github.com/smashingboxes/taperole/pull/23): Added features
 * [#32 Remove vendored roles from Repository](https://github.com/smashingboxes/taperole/pull/32): Cleanup
-* [#36 Dont Install node.js from source](https://github.com/smashingboxes/taperole/pull/36): Major Rewrite
+* [#36 Don't Install node.js from source](https://github.com/smashingboxes/taperole/pull/36): Major Rewrite
 * [#38 Chore/fix vagrant](https://github.com/smashingboxes/taperole/pull/38): Cleanup/improves dev tools
 * [#42 Installer updates](https://github.com/smashingboxes/taperole/pull/42): API Changes
 

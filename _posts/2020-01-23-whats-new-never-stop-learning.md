@@ -29,7 +29,7 @@ So far, I've been satisfied with the platform and content, I've completed these 
 8. Introduction to State Machines Using XState
 
 After I'm done with egghead.io, I plan to move to [TESTING JAVASCRIPT.com](https://testingjavascript.com/) which is
-created by the same croud, but hyper-focused on JavaScript testing.
+created by the same crowd, but hyper-focused on JavaScript testing.
 
 ___
 
