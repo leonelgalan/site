@@ -34,7 +34,7 @@ had to relearn some shortcuts and re-discover extensions, but ultimately I've be
 ## Desktop Apps
 
 * Window management: [Rectangle](https://rectangleapp.com/) a recommended alternative to [Spectacle](https://github.com/eczarny/spectacle).
-* Menu Bar management: [Bartender 3](https://www.macbartender.com/). I have used [Vanilla](https://matthewpalmer.net/vanilla/) before, but had trouble when upgrading to Catalina.
+* Menu Bar management: [Vanilla](https://matthewpalmer.net/vanilla/). I've used [Bartender 3](https://www.macbartender.com/) before.
 * Keep-awake utility: [Amphetamine](https://apps.apple.com/us/app/amphetamine/id937984704)
 * Password manager: [1Password](https://1password.com/)
 * Web font installation: [SkyFonts](https://www.monotype.com/products/skyfonts)
