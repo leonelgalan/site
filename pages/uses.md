@@ -47,6 +47,13 @@ had to relearn some shortcuts and find new extensions, but ultimately I've been 
 * Design/graphics editor: [Figma](https://www.figma.com)
 * Javascript notebooks: [Observable](https://observablehq.com)
 
+## Chrome Extensions
+
+* React/Redux Developer Tools
+* uBlock Origin: Ad blocker
+* [UBlacklist](https://chrome.google.com/webstore/detail/ublacklist/pncfbmialoiaghdehhbnbhkkgmjanfhe): Blocks specific sites from appearing in Google search results
+* [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa)
+
 ___
 
 <small>
