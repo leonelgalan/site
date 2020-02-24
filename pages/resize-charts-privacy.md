@@ -6,13 +6,13 @@ permalink: /resize-charts/privacy
 
 # Privacy Policy for Resize Charts
 
-At Resize Charts, accessible as an add-on in the G Suite Marketplace, one of our main priorities is the privacy of our users. **We do not collect user information and the add-on is [open sourced](https://github.com/leonelgalan/resize_charts) for anyone to review.**
+At Resize Charts, accessible as an add-on in the G Suite Marketplace, one of our main priorities is the privacy of our users. **We do not collect user information or data, and the add-on is [open sourced](https://github.com/leonelgalan/resize_charts) for anyone to review.**
 
 If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.
 
 ## Log Files
 
-Resize Charts does not log user information. It's our understanding that some stats such as executions, completed or failed are logged by the Google Apps Script platform.
+Resize Charts does not log user information or data. For debugging purposes, it might log runtime information, such as the authorization mode in which functions run. It's our understanding that some stats such as executions, completed or failed are logged by the Google Apps Script platform.
 
 ## Third Party Privacy Policies
 
