@@ -99,11 +99,9 @@ Inspecting 40 files
 
 This created two files _.rubocop.yml_ and _.rubocop_todo.yml_. The first is your project’s final configuration file, for now, it simply inherits a temporary configuration from _.rubocop_todo.yml_ (TO DO from now on). This allows the project to have no offenses. But the point of the TO DO is for us to remove the configuration records one by one as the offenses are removed from the code base or the configuration is moved outside of the TO DO.
 
-First let’s fix the warnings by enabling the three cops that aren’t configured yet.
+First let’s fix the warnings by enabling the three cops that aren’t configured yet. Add the following to _.rubocop.yml_: [`4fff12c`](https://github.com/leonelgalan/rubocop-app-demo/tree/4fff12cf06f55c629382f2bdab9a1c62340e4d53)
 
 ```yml
-# .rubocop.yml
-
 Style/HashEachMethods:
   Enabled: true
 
@@ -134,7 +132,7 @@ Bundler/OrderedGems:
     - 'Gemfile'
 ```
 
-This cop seems like a good idea, as the project grows ordered gems will make the Gemfile easier to read. We also learned that the cop supports auto correct, so simply removing this block from the TODO and running rubocop autocorrect will remove the offense:
+This cop seems like a good idea, as the project grows ordered gems will make the Gemfile easier to read. We also learned that the cop supports auto correct, so simply removing this block from the TODO and running rubocop autocorrect will remove the offense: [`443b282`](https://github.com/leonelgalan/rubocop-app-demo/tree/443b28292b85d7eb6e421a7781da7bd99cb7f4cd)
 
 ```sh
 $ rubocop --auto-correct
@@ -168,7 +166,7 @@ Layout/ArgumentAlignment:
     - 'bin/webpack-dev-server'
 ```
 
-We do want the `Layout/ArgumentAlignment` cop, but files in the _bin/_ folder are usually automatically generated, and to avoid a constant back and forth, it’s probably better to avoid _bin/_ when running all the cops (`AllCops`). Add the following to your project’s Rubocop configuration (_.rubocop.yml_) and remove the block from the TO DO. While we are here, let’s also ignore _node_modules/_, I remember having some issues with ruby files inside node-sass.
+We do want the `Layout/ArgumentAlignment` cop, but files in the _bin/_ folder are usually automatically generated, and to avoid a constant back and forth, it’s probably better to avoid _bin/_ when running all the cops (`AllCops`). Add the following to your project’s Rubocop configuration (_.rubocop.yml_) and remove the block from the TO DO. While we are here, let’s also ignore _node_modules/_, I remember having some issues with ruby files inside node-sass. [`9e0f61d`](https://github.com/leonelgalan/rubocop-app-demo/tree/9e0f61da6987e9fab2bb46a2b7d199220bdb391a)
 
 ```yml
 AllCops:
@@ -204,7 +202,7 @@ Ignoring the configuration for `Metrics/AbcSize`, `Metrics/CyclomaticComplexity`
 
 Changing `Layout/LineLength`’s `Max` to 120. To match the rulers in my editor.
 
-After going clearing the TO DO, remove the file and the line inheriting from it in your project’s configuration. Run rubocop’s autocorrect again:
+After going clearing the TO DO, remove the file and the line inheriting from it in your project’s configuration. Run rubocop’s autocorrect again: [`32f03b8`](https://github.com/leonelgalan/rubocop-app-demo/tree/32f03b8ad68df1be331692cad713d657900ca774) [`6814cc7`](https://github.com/leonelgalan/rubocop-app-demo/tree/6814cc7a5ed05bff08beb74556ec7d2adbb26545)
 
 ```sh
 $ rubocop --auto-correct
