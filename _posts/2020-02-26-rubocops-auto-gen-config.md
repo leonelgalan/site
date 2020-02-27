@@ -32,8 +32,8 @@ Rails 6.0.2.1
 Create a new Rails app and get inside the newly created directory:
 
 ```sh
-$ rails new rubocop-app-demo
-$ cd rubocop-app-demo
+rails new rubocop-app-demo
+cd rubocop-app-demo
 ```
 
 Open the `Gemfile` and add _rubocop_ and _rubocop-rails_ inside a `:development` group and add `require: false` to both lines according to the gems’ documentation [(1)](https://github.com/rubocop-hq/rubocop#installation)[(2)](https://github.com/rubocop-hq/rubocop-rails#installation):
@@ -82,7 +82,7 @@ Not a great start, let’s get this sorted out.
 
 ## The Process
 
-Rubocop includes a tool to auto generate a configuration . Simply pass the `--auto-gen-config` flag to generate a configuration acting as a TODO list:
+Rubocop includes a tool to auto generate a configuration . Simply pass the `--auto-gen-config` flag to generate a configuration acting as a TO DO list:
 
 ```sh
 $ rubocop --auto-gen-config
@@ -132,7 +132,7 @@ Bundler/OrderedGems:
     - 'Gemfile'
 ```
 
-This cop seems like a good idea, as the project grows ordered gems will make the Gemfile easier to read. We also learned that the cop supports auto correct, so simply removing this block from the TODO and running rubocop autocorrect will remove the offense: [`443b282`](https://github.com/leonelgalan/rubocop-app-demo/tree/443b28292b85d7eb6e421a7781da7bd99cb7f4cd)
+This cop seems like a good idea, as the project grows ordered gems will make the Gemfile easier to read. We also learned that the cop supports auto correct, so simply removing this block from the TO DO and running rubocop autocorrect will remove the offense: [`443b282`](https://github.com/leonelgalan/rubocop-app-demo/tree/443b28292b85d7eb6e421a7781da7bd99cb7f4cd)
 
 ```sh
 $ rubocop --auto-correct
@@ -185,7 +185,8 @@ Inspecting 32 files
 32 files inspected, no offenses detected
 ```
 
-Cop by cop, decide what you want to do with each:
+Cop by cop, decide what you want to do with each:s
+
 * Remove the excludes (so offenses are corrected or pop up)
 * Move the excludes to _.rubocop.yml_ if you don’t want to deal with a cop/file combination.
 * Completely disabling a cop, by setting `Enabled: false`
@@ -225,6 +226,7 @@ require "test_helper"
 ```
 
 ## The Result
+
 All 17 offenses were corrected, let’s do it one more time to have a clean result:
 
 ```sh
