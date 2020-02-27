@@ -71,6 +71,12 @@ collaborate back to the projects that save me time and/or make my job easier.
 
 ## Javascript
 
+### [Resize Charts](https://github.com/leonelgalan/resize_charts)
+
+> This add-on allows you to resize, with precision, the charts in the active sheet. Type the desired width and height in inches or pixels, select a resolution and press "Resize All"
+
+Google Sheets Add-on, published in the [G Suite Marketplace](https://gsuite.google.com/marketplace/app/resize_charts/10131240662)
+
 ### [leonelgalan/asdfjkl](https://github.com/leonelgalan/asdfjkl)
 
 > Determines if text contains gibberish.
