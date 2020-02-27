@@ -41,6 +41,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-twitter-plugin
 
 paginate: 2
 paginate_path: /page:num/

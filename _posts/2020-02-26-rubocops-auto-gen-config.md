@@ -8,11 +8,9 @@ image: /assets/images/posts/lenny-kuhne-jHZ70nRk7Ns-unsplash.jpg
 I’ve always been fascinated with linters, code formatters and other static analysis tools. For Ruby, [Rubocop](https://www.rubocop.org/) is king, it will enforce many of the guidelines outlined in the community’s [Ruby Style Guide](https://rubystyle.guide/), but it’s flexible enough for you to decide how to write your code. Setting up Rubocop when first starting a project allows you to quickly fix all the initial offenses (150+ for a vanilla Rails installation, see below) and analyze your code constantly (on
 save, on commit, before accepting a pull requests) to keep your project offense free.
 
-A friend [tweeted](https://twitter.com/BrandonMathis/status/1232371983234600960) recently:
+{% twitter https://twitter.com/BrandonMathis/status/1232371983234600960 %}
 
-> “Looking for a way to increase your engineering team's velocity? Install a linter and stop arguing in PRs about code formatting/style.”
-
-He’s right, I’ve spent countless hours debating: single vs. double quotes and spaces vs. tabs. But it really doesn’t matter, let’s write the code however we like and have a tool like Rubocop enforce the guidelines we’ve agreed beforehand.
+A friend the above recently and he's right; I’ve spent countless hours debating: single vs. double quotes and spaces vs. tabs. But it really doesn’t matter, let’s write the code however we like and have a tool like Rubocop enforce the guidelines we’ve agreed beforehand.
 
 I’ve been out of consulting for almost 5 years now, so I don’t get to start new Rails apps every couple of months. I created one today, to follow along a graphql tutorial (future blog post, maybe?) and stumble upon a feature from Rubocop I didn’t know: auto generate configuration. Let’s explore it together!
 
