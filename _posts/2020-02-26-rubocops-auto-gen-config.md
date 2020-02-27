@@ -10,7 +10,7 @@ save, on commit, before accepting a pull requests) to keep your project offense 
 
 {% twitter https://twitter.com/BrandonMathis/status/1232371983234600960 %}
 
-A friend the above recently and he's right; I’ve spent countless hours debating: single vs. double quotes and spaces vs. tabs. But it really doesn’t matter, let’s write the code however we like and have a tool like Rubocop enforce the guidelines we’ve agreed beforehand.
+A friend tweeted the above recently and he's right; I’ve spent countless hours debating: single vs. double quotes and spaces vs. tabs. But it really doesn’t matter, let’s write the code however we like and have a tool like Rubocop enforce the guidelines we’ve agreed beforehand.
 
 I’ve been out of consulting for almost 5 years now, so I don’t get to start new Rails apps every couple of months. I created one today, to follow along a graphql tutorial (future blog post, maybe?) and stumble upon a feature from Rubocop I didn’t know: auto generate configuration. Let’s explore it together!
 
