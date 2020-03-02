@@ -122,7 +122,7 @@ webpack-dev-server
 rails server
 ```
 
-Open _http:localhost:3000/_ and you'll see both: "Hello React" in the body and "Hello World from Webpacker" in the browser’s console.
+Open _http://localhost:3000/_ and you'll see both: "Hello React" in the body and "Hello World from Webpacker" in the browser’s console.
 
 I've published this on Github at [leonelgalan/rails-api-webpacker-demo](https://github.com/leonelgalan/rails-api-webpacker-demo) and deployed to Heroku as [ancient-falls-96742.herokuapp.com](https://ancient-falls-96742.herokuapp.com/)
 
