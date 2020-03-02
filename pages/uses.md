@@ -54,6 +54,17 @@ had to relearn some shortcuts and find new extensions, but ultimately I've been 
 * [UBlacklist](https://chrome.google.com/webstore/detail/ublacklist/pncfbmialoiaghdehhbnbhkkgmjanfhe): Blocks specific sites from appearing in Google search results
 * [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa)
 
+## Screencast Preferences/Settings
+
+* Prefer full screen, toggle using mousepad and not `` ⌘ + tab ``
+* Text Editor
+  * Configure editor's font size: 14 and window's zoom level: 2
+  * Hide the side bar if possible
+* Use font size 24 in the terminal (I've created a "screencast" profile)
+* Use a "Hide Desktop Icons" setting if available
+* Record at native resolution: 2560x1600 @2x, export at 50% 1280x80.
+* Audio: Apply Noise Reduction, EQ, Compressor and Normalizer to voice recordings.
+
 ___
 
 <small>
