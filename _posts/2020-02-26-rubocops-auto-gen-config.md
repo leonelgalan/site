@@ -3,6 +3,9 @@ layout: post
 title: Rubocop's `--auto-gen-config`
 date: 2020-02-26 12:00:00 -0400
 image: /assets/images/posts/lenny-kuhne-jHZ70nRk7Ns-unsplash.jpg
+tags:
+  - ruby
+  - rails
 ---
 
 I’ve always been fascinated with linters, code formatters and other static analysis tools. For Ruby, [Rubocop](https://www.rubocop.org/) is king, it will enforce many of the guidelines outlined in the community’s [Ruby Style Guide](https://rubystyle.guide/), but it’s flexible enough for you to decide how to write your code. Setting up Rubocop when first starting a project allows you to quickly fix all the initial offenses (150+ for a vanilla Rails installation, see below) and analyze your code constantly (on
