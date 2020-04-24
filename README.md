@@ -11,7 +11,6 @@ bundle exec jekyll serve --future
 Optionally, start both _Jekyll_ and _Browsersync_ (`npm i -g browser-sync`) with a tool that runs a _Procfile_:
 
 * `foreman start` (`gem install foreman`)
-* `heroku local`
 
 I [decided](https://github.com/leonelgalan/site/commit/81ac3fac8b5a832a54fe03dd67d80b2639b74580) not to add Browsersync to the development requirements because this setup is optional.
 
