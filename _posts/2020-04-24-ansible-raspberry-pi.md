@@ -10,7 +10,7 @@ tags:
 
 I've been playing with _Raspberry Pi_ computers for a while; I bought my first back in 2015. Since then I've bought more than I can remember. Setting them up has always been a ritual: I got a cheap USB keyboard/mouse combo, a USB/Ethernet adapter for my Mac and all the right HDMI cables, the mini included for the Zero.
 
-I knew I couldn't keep searching for the right syntax for `dd` everytime I wanted to set up a Pi and that keyboard/mouse set is a strain to the eyes. I would prefer to keep them hidden. I wrote this _Shell_ and _Ansible_ scripts to get faster to the fun bits of the projects.
+I knew I couldn't keep searching for the right syntax for `dd` every time I wanted to set up a Pi and that keyboard/mouse set is a strain to the eyes. I would prefer to keep them hidden. I wrote this _Shell_ and _Ansible_ scripts to get faster to the fun bits of the projects.
 
 > This was originally written as a [personal project's README](https://github.com/leonelgalan/ansible-pi), so it's format might be a combination of that and a blog post. - _Me in the editor role_
 
@@ -41,7 +41,7 @@ network={
 
 ### Prepare your SD Card
 
-All the code in this section should be run on the same terminal session. Just make sure you edit the `IMAGE_NANE` and `DISK` variables before.
+All the code in this section should be run on the same terminal session. Just make sure you edit the `IMAGE_NAME` and `DISK` variables before.
 
 #### Download Raspian
 
@@ -58,7 +58,7 @@ IMAGE=$(ls *.img)
 
 ### Copy Raspbian and Setup the Network
 
-Insert your card and find the disk's name: `diskN`, where `N` is a number. Identify the disk (not the partition) of your SD card (`disk2`, not `disk2s1`) by looking at its size  (for example, a 16GB SD card might show as *15.5 GB
+Insert your card and find the disk's name: `diskN`, where `N` is a number. Identify the disk (not the partition) of your SD card (`disk2`, not `disk2s1`) by looking at its size  (for example, a 16 GB SD card might show as *15.5 GB
 
 ```sh
 diskutil list
@@ -164,7 +164,7 @@ This is a short list of projects I've built with Pis, hopefully it inspires you 
 
 * My latest project is a timelapse camera / humidity and temperature sensor to keep track of my new sourdough starter: "Paco" and its offspring levains, naturally called "Paquito"
 * I was growing some chili peppers from seeds and used a Raspberry Pi with the SenseHat's display as a dashboard of sorts; I wanted to measure the soil humidity, air temperature/humidity, and light
-* I build hat for a Raspberry Pi Zero W, with a NoIR camera and a custom IR lamp (three super bright leds)The led can be controlled through one of the GPIO pins, so it can be turn on and off with the camera
+* I build hat for a Raspberry Pi Zero W, with a NoIR camera and a custom IR lamp (three super bright LED)The led can be controlled through one of the GPIO pins, so it can be turn on and off with the camera
 * There is one behind my office TV that boots into Chrome's Kiosk mode with a business dashboard
 * There is another behind my living room TV that orchestrates local media: sync to computers, local and remote backups. Because it's always running it's always doing something else: track temperature, internet speed, etc.
 
