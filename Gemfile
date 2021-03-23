@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-gem 'jekyll', '~> 4.0'
+gem 'jekyll', '~> 4.2'
 gem 'jekyll-theme-basically-basic'
 
 gem 'jekyll-twitter-plugin'
