@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://leonelgalan.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://leonelgalan.com/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2021-03-23T21:11:37+00:00</updated><id>https://leonelgalan.com/feed.xml</id><title type="html">Leonel Galán</title><subtitle>Software Developer</subtitle><author><name>Leonel Galán</name></author><entry><title type="html">New Hardware</title><link href="https://leonelgalan.com/2021/03/23/newish-hardware.html" rel="alternate" type="text/html" title="New Hardware" /><published>2021-03-23T16:00:00+00:00</published><updated>2021-03-23T16:00:00+00:00</updated><id>https://leonelgalan.com/2021/03/23/newish-hardware</id><content type="html" xml:base="https://leonelgalan.com/2021/03/23/newish-hardware.html">&lt;p&gt;After 10+ years of using Apple’s Magic Keyboard and Mouse, don’t judge, I switched! I bought Logitech’s &lt;a href=&quot;https://www.logitech.com/en-us/products/keyboards/mx-keys-wireless-keyboard.html&quot;&gt;&lt;em&gt;MX Keys Wireless Illuminated Keyboard&lt;/em&gt;&lt;/a&gt; and &lt;a href=&quot;https://www.logitech.com/en-us/products/mice/mx-master-3.html&quot;&gt;&lt;em&gt;MX Master 3 Wireless Mouse with Hyper-fast Scroll&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Often, I work with Windows and Mac, side-by-side, and &lt;a href=&quot;https://www.logitech.com/en-us/product/options/page/flow-multi-device-control&quot;&gt;Logitech Flow&lt;/a&gt; makes it so much easier.&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;//TODO: Blog about setting up the Magic Mouse 2 in Windows 10&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;For most of my development I’m using Ubuntu, installed through WSL. I needed the contents of a file inside Ubuntu in my Mac: I read the file contents and sent that to the Windows Clipboard:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;secrets.txt | clip.exe
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I moved my mouse into my Mac and because my clipboard is shared across computers I was able to paste the contents inside the &lt;em&gt;secrets.txt&lt;/em&gt; on my Mac. That single operation used all three operating systems at once!&lt;/p&gt;
+
+&lt;h2 id=&quot;other-pros&quot;&gt;Other Pros&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Being able to charge the mouse while in use&lt;/li&gt;
+  &lt;li&gt;The mouse ergonomics are much better than the Magic Mouse&lt;/li&gt;
+  &lt;li&gt;The scroll wheels are truly amazing and I have a middle click button&lt;/li&gt;
+  &lt;li&gt;Quickly toggle between 3 devices (even without using Flow)&lt;/li&gt;
+  &lt;li&gt;Having a numpad&lt;/li&gt;
+  &lt;li&gt;No switches to toggle when changing between Windows/Mac&lt;/li&gt;
+  &lt;li&gt;USB Type C, no more lighting cables&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;small&gt;
+  Photo by &lt;a href=&quot;https://unsplash.com/photos/7GIjoIpbcuU&quot;&gt;Raul Perțe&lt;/a&gt;
+&lt;/small&gt;&lt;/p&gt;</content><author><name>Leonel Galán</name></author><category term="short" /><category term="uses" /><category term="hardware" /><summary type="html">After 10+ years of using Apple’s Magic Keyboard and Mouse, don’t judge, I switched! I bought Logitech’s MX Keys Wireless Illuminated Keyboard and MX Master 3 Wireless Mouse with Hyper-fast Scroll.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://leonelgalan.com/assets/images/posts/raul-per-e-7GIjoIpbcuU-unsplash.jpg" /><media:content medium="image" url="https://leonelgalan.com/assets/images/posts/raul-per-e-7GIjoIpbcuU-unsplash.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Ansible and Raspberry Pi</title><link href="https://leonelgalan.com/2020/04/24/ansible-raspberry-pi.html" rel="alternate" type="text/html" title="Ansible and Raspberry Pi" /><published>2020-04-24T16:00:00+00:00</published><updated>2020-04-24T16:00:00+00:00</updated><id>https://leonelgalan.com/2020/04/24/ansible-raspberry-pi</id><content type="html" xml:base="https://leonelgalan.com/2020/04/24/ansible-raspberry-pi.html">&lt;p&gt;I’ve been playing with &lt;em&gt;Raspberry Pi&lt;/em&gt; computers for a while; I bought my first back in 2015. Since then I’ve bought more than I can remember. Setting them up has always been a ritual: I got a cheap USB keyboard/mouse combo, a USB/Ethernet adapter for my Mac and all the right HDMI cables, the mini included for the Zero.&lt;/p&gt;
+
+&lt;p&gt;I knew I couldn’t keep searching for the right syntax for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dd&lt;/code&gt; every time I wanted to set up a Pi and that keyboard/mouse set is a strain to the eyes. I would prefer to keep them hidden. I wrote this &lt;em&gt;Shell&lt;/em&gt; and &lt;em&gt;Ansible&lt;/em&gt; scripts to get faster to the fun bits of the projects.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This was originally written as a &lt;a href=&quot;https://github.com/leonelgalan/ansible-pi&quot;&gt;personal project’s README&lt;/a&gt;, so it’s format might be a combination of that and a blog post. - &lt;em&gt;Me in the editor role&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;install-raspbian&quot;&gt;Install Raspbian&lt;/h2&gt;
+
+&lt;h3 id=&quot;network-configuration&quot;&gt;Network Configuration&lt;/h3&gt;
+
+&lt;p&gt;For those Pis with wireless connectivity, We can have them connect to a wireless network on its first boot by adding a &lt;em&gt;wpa_supplicant.conf&lt;/em&gt; to the SD card before.&lt;/p&gt;
+
+&lt;p&gt;Make a copy of &lt;a href=&quot;https://github.com/leonelgalan/ansible-pi/blob/master/wpa_supplicant.conf.example&quot;&gt;&lt;em&gt;wpa_supplicant.conf&lt;/em&gt;&lt;/a&gt; and fill in your network’s name (ssid) and pre-shared key (psk), configure other properties as needed (e.g. country):&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cp &lt;/span&gt;wpa_supplicant.conf.example wpa_supplicant.conf
+code wpa_supplicant.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-conf highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;ctrl_interface&lt;/span&gt;=&lt;span class=&quot;n&quot;&gt;DIR&lt;/span&gt;=/&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;wpa_supplicant&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GROUP&lt;/span&gt;=&lt;span class=&quot;n&quot;&gt;netdev&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;update_config&lt;/span&gt;=&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;country&lt;/span&gt;=&lt;span class=&quot;n&quot;&gt;US&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;network&lt;/span&gt;={
+  &lt;span class=&quot;n&quot;&gt;ssid&lt;/span&gt;=&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;psk&lt;/span&gt;=&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;key_mgmt&lt;/span&gt;=&lt;span class=&quot;n&quot;&gt;WPA&lt;/span&gt;-&lt;span class=&quot;n&quot;&gt;PSK&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;prepare-your-sd-card&quot;&gt;Prepare your SD Card&lt;/h3&gt;
+
+&lt;p&gt;All the code in this section should be run on the same terminal session. Just make sure you edit the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;IMAGE_NAME&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DISK&lt;/code&gt; variables before.&lt;/p&gt;
+
+&lt;h4 id=&quot;download-raspian&quot;&gt;Download Raspian&lt;/h4&gt;
+
+&lt;p&gt;Choose the Raspian image of your choice and download it from &lt;a href=&quot;https://www.raspberrypi.org/downloads/raspbian/&quot;&gt;https://www.raspberrypi.org/downloads/raspbian/&lt;/a&gt;. Modify &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;IMAGE_NAME&lt;/code&gt; before running.&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Options: raspbian (Desktop), raspbian_full (Desktop with recommended software), raspbian_lite (Lite)&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;IMAGE_NANE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;raspbian_lite
+curl &lt;span class=&quot;nt&quot;&gt;--location&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--remote-name&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;https://downloads.raspberrypi.org/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;IMAGE_NANE&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;_latest&quot;&lt;/span&gt;
+unzip &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.zip
+&lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.zip
+&lt;span class=&quot;nv&quot;&gt;IMAGE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.img&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;copy-raspbian-and-setup-the-network&quot;&gt;Copy Raspbian and Setup the Network&lt;/h3&gt;
+
+&lt;p&gt;Insert your card and find the disk’s name: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;diskN&lt;/code&gt;, where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;N&lt;/code&gt; is a number. Identify the disk (not the partition) of your SD card (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;disk2&lt;/code&gt;, not &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;disk2s1&lt;/code&gt;) by looking at its size  (for example, a 16 GB SD card might show as *15.5 GB&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;diskutil list
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Make sure you modify &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DISK&lt;/code&gt; before.&lt;/strong&gt; Copy raspbian to the card and setup the network to:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Connect to a wireless network.&lt;/li&gt;
+  &lt;li&gt;Accept incoming SSH connections.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;DISK&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;disk2
+diskutil unmountDisk /dev/&lt;span class=&quot;nv&quot;&gt;$DISK&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo dd &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;bs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1m &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$IMAGE&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/dev/r&lt;span class=&quot;nv&quot;&gt;$DISK&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;conv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sync&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Between few seconds and a couple of minutes, Ctrl+T to view Progress&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Copy the wpa_supplicant.conf you created above&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cp &lt;/span&gt;wpa_supplicant.conf /Volumes/boot/
+&lt;span class=&quot;c&quot;&gt;# Enable incoming SSH connections by creating an empty ssh file.&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;touch&lt;/span&gt; /Volumes/boot/ssh
+
+&lt;span class=&quot;c&quot;&gt;# Eject the SD card properly&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;diskutil eject /dev/r&lt;span class=&quot;nv&quot;&gt;$DISK&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;find-your-raspberry-pis-ip-address&quot;&gt;Find your Raspberry Pi’s IP Address&lt;/h3&gt;
+
+&lt;p&gt;Insert the SD card on the and turn on your Pi; Wait about 1 minute for it to boot.&lt;/p&gt;
+
+&lt;p&gt;Find your Raspberry Pi’s IP address by searching for part of its MAC Address:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;nmap &lt;span class=&quot;nt&quot;&gt;-sP&lt;/span&gt; 192.168.1.0/24 | &lt;span class=&quot;nb&quot;&gt;awk&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/^Nmap/{ip=$NF}/B8:27:EB/{print ip}
+192.168.1.11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You might need to install &lt;em&gt;nmap&lt;/em&gt; before. See additional details in this &lt;a href=&quot;https://raspberrypi.stackexchange.com/a/13937&quot;&gt;Stack Exchange’s post&lt;/a&gt;. Copy this IP address to the &lt;a href=&quot;https://github.com/leonelgalan/ansible-pi/blob/master/hosts&quot;&gt;&lt;em&gt;hosts&lt;/em&gt;&lt;/a&gt; file under &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[pi]&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[pi]
+192.168.1.11
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;install-ansibles-requirements-and-run-step01yml&quot;&gt;Install Ansible’s requirements and Run &lt;em&gt;step01.yml&lt;/em&gt;&lt;/h3&gt;
+
+&lt;h4 id=&quot;a-note-about-ansible&quot;&gt;A note about Ansible&lt;/h4&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Ansible is an open-source software provisioning, configuration management, and application-deployment tool. - &lt;a href=&quot;https://en.wikipedia.org/wiki/Ansible_(software)&quot;&gt;Wikipedia: Ansible (software)&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h5 id=&quot;what-you-need-to-know&quot;&gt;What You Need to Know?&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;hosts&lt;/em&gt; define the list of hosts, playbooks say in which hosts they run. We are saying there is host &lt;em&gt;pi&lt;/em&gt; and its IP Address.&lt;/li&gt;
+  &lt;li&gt;The playbooks, defines in which hosts are going to run or “all”, as who (what user) and what roles to run and their configuration.&lt;/li&gt;
+  &lt;li&gt;Roles are groupings of functionality, which facilitates sharing and there are plenty hosted in the Ansible Galaxy. This “project” has one local role and uses two from the Ansible Galaxy, listed in the &lt;a href=&quot;https://github.com/leonelgalan/ansible-pi/blob/master/requirements.yml&quot;&gt;&lt;em&gt;requirements.yml&lt;/em&gt;&lt;/a&gt; and installed by calling the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ansible-galaxy&lt;/code&gt; command below.&lt;/li&gt;
+  &lt;li&gt;A project might have local roles, in this case &lt;a href=&quot;https://github.com/leonelgalan/ansible-pi/tree/master/pip3&quot;&gt;&lt;em&gt;pip3&lt;/em&gt;&lt;/a&gt;. Inside of it the folders are named appropriately, you should explore its contents to peek inside of how Ansible works.&lt;/li&gt;
+  &lt;li&gt;Each role’s documentation should tell you what the role can do and how to set it up.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;step01yml&quot;&gt;&lt;a href=&quot;https://github.com/leonelgalan/ansible-pi/blob/master/step01.yml&quot;&gt;&lt;em&gt;step01.yml&lt;/em&gt;&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;This is the minimum configuration I do on my Raspberry Pi’s before using them. It adds a single role: &lt;em&gt;raspi_config&lt;/em&gt; which does some configuration by default, but allows me to override those to better suit my needs.&lt;/p&gt;
+
+&lt;h5 id=&quot;implicit-default&quot;&gt;Implicit (default)&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Update and Upgrade&lt;/li&gt;
+  &lt;li&gt;Expand filesystem to fill the SD card&lt;/li&gt;
+  &lt;li&gt;Setup the Locale: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;en_US.UTF-8&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;explicit&quot;&gt;Explicit&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Setup my timezone to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;America/New_York&lt;/code&gt;, default is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UTC&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Enable the camera, if that’s my intended use for this particular Pi&lt;/li&gt;
+  &lt;li&gt;Replace the default &lt;strong&gt;pi&lt;/strong&gt; user with myself (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;whoami&lt;/code&gt;) and copy my public ssh key, so I can ssh in without specifying a user or typing a password.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Find the defaults and additional settings on the &lt;a href=&quot;https://github.com/mikolak-net/ansible-raspi-config&quot;&gt;role’s README&lt;/a&gt;. &lt;strong&gt;Edit &lt;em&gt;step01.yml&lt;/em&gt; as needed before running&lt;/strong&gt; the following lines:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ansible-galaxy &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; requirements.yml
+ansible-playbook _initial.yml &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; hosts &lt;span class=&quot;nt&quot;&gt;--ask-pass&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;run-step02yml&quot;&gt;Run &lt;a href=&quot;https://github.com/leonelgalan/ansible-pi/blob/master/step02.yml&quot;&gt;&lt;em&gt;step02.yml&lt;/em&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Now connected as the user you just created (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;remote_user: leonelgalan&lt;/code&gt;, &lt;strong&gt;REMEMBER&lt;/strong&gt; to change this), install the packages you might need, &lt;strong&gt;edit step02.yml_&lt;/strong&gt; based on your desire setup:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Packages:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python3-pip&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sense-hat&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python-smbus&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;i2c-tools&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python-setuptools&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Python Packages
+    &lt;ul&gt;
+      &lt;li&gt;Upgrade &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setuptools&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RPI.GPIO&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;adafruit-circuitpython-htu21d&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ansible-playbook step02.yml &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; hosts &lt;span class=&quot;nt&quot;&gt;--ask-pass&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;build-something&quot;&gt;Build Something&lt;/h3&gt;
+
+&lt;p&gt;This is a short list of projects I’ve built with Pis, hopefully it inspires you to build something:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;My latest project is a timelapse camera / humidity and temperature sensor to keep track of my new sourdough starter: “Paco” and its offspring levains, naturally called “Paquito”&lt;/li&gt;
+  &lt;li&gt;I was growing some chili peppers from seeds and used a Raspberry Pi with the SenseHat’s display as a dashboard of sorts; I wanted to measure the soil humidity, air temperature/humidity, and light&lt;/li&gt;
+  &lt;li&gt;I build hat for a Raspberry Pi Zero W, with a NoIR camera and a custom IR lamp (three super bright LED)The led can be controlled through one of the GPIO pins, so it can be turn on and off with the camera&lt;/li&gt;
+  &lt;li&gt;There is one behind my office TV that boots into Chrome’s Kiosk mode with a business dashboard&lt;/li&gt;
+  &lt;li&gt;There is another behind my living room TV that orchestrates local media: sync to computers, local and remote backups. Because it’s always running it’s always doing something else: track temperature, internet speed, etc.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;small&gt;
+  Photo by &lt;a href=&quot;https://unsplash.com/photos/bw5a4zQMRCI&quot;&gt;Harrison Broadbent&lt;/a&gt;
+&lt;/small&gt;&lt;/p&gt;</content><author><name>Leonel Galán</name></author><category term="raspberry pi" /><category term="ansible" /><summary type="html">I’ve been playing with Raspberry Pi computers for a while; I bought my first back in 2015. Since then I’ve bought more than I can remember. Setting them up has always been a ritual: I got a cheap USB keyboard/mouse combo, a USB/Ethernet adapter for my Mac and all the right HDMI cables, the mini included for the Zero.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://leonelgalan.com/assets/images/posts/harrison-broadbent-bw5a4zQMRCI-unsplash.jpg" /><media:content medium="image" url="https://leonelgalan.com/assets/images/posts/harrison-broadbent-bw5a4zQMRCI-unsplash.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Rails Friends: API and Webpacker</title><link href="https://leonelgalan.com/2020/03/01/rails-api-and-webpacker.html" rel="alternate" type="text/html" title="Rails Friends: API and Webpacker" /><published>2020-03-01T16:00:00+00:00</published><updated>2020-03-01T16:00:00+00:00</updated><id>https://leonelgalan.com/2020/03/01/rails-api-and-webpacker</id><content type="html" xml:base="https://leonelgalan.com/2020/03/01/rails-api-and-webpacker.html">&lt;p&gt;It appears you can not use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--api&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--webpack=react&lt;/code&gt; together when creating a new Rails App. It’s a shame, because having Rails handle the backend and React, or other JS framework, handle the frontend is a common setup. But it is possible to add webpacker to an api App and use HtmlWebpackPlugin to serve the webpack bundles.&lt;/p&gt;
+
+&lt;p&gt;Nothing on the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rails new&lt;/code&gt; documentation suggest that the two are incompatible, but running &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rails new rails-api-webpacker-demo --api --webpack=react&lt;/code&gt; together, &lt;a href=&quot;https://github.com/leonelgalan/rails-api-webpacker-demo/compare/both-flags...only-webpack&quot;&gt;appears to ignore&lt;/a&gt; the webpacker configuration steps.&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;rails new &lt;span class=&quot;nt&quot;&gt;--help&lt;/span&gt;
+...
+    &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--api&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;, &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--no-api&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;          &lt;span class=&quot;c&quot;&gt;# Preconfigure smaller stack for API only apps&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;--webpacker&lt;/span&gt;, &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--webpack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;WEBPACK] &lt;span class=&quot;c&quot;&gt;# Preconfigure Webpack with a particular framework (options: react, ...)&lt;/span&gt;
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I found this &lt;a href=&quot;https://github.com/rails/webpacker/issues/1361#issuecomment-374682079&quot;&gt;comment&lt;/a&gt; on a Webpacker issue titled: “Rails API + Webpacker?”. This blog post is based on the &lt;a href=&quot;https://github.com/gauravtiwari/webpacker-api-frontend&quot;&gt;linked repository&lt;/a&gt;, broken down into steps for easier understanding.&lt;/p&gt;
+
+&lt;h2 id=&quot;tutorial&quot;&gt;Tutorial&lt;/h2&gt;
+
+&lt;h3 id=&quot;create-an---api-app&quot;&gt;Create an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--api&lt;/code&gt; App&lt;/h3&gt;
+
+&lt;p&gt;Because &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--api&lt;/code&gt; preconfigures a smaller stack, let’s start with it and add webpacker later.&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rails new rails-api-webpacker-demo &lt;span class=&quot;nt&quot;&gt;--api&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;install-webpacker&quot;&gt;Install Webpacker&lt;/h3&gt;
+
+&lt;p&gt;Add to &lt;em&gt;Gemfile&lt;/em&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'webpacker'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Run:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle &lt;span class=&quot;nb&quot;&gt;install
+&lt;/span&gt;rails webpacker:install
+rails webpacker:install:react
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;install-htmlwebpackplugin-and-htmlwebpackharddiskplugin&quot;&gt;Install HtmlWebpackPlugin and HtmlWebpackHarddiskPlugin&lt;/h3&gt;
+
+&lt;p&gt;Run:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yarn add html-webpack-plugin html-webpack-harddisk-plugin
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Configure the installed plugins in &lt;em&gt;config/webpack/environment.js&lt;/em&gt; according to their documentation &lt;a href=&quot;https://github.com/jantimon/html-webpack-plugin#options&quot;&gt;(1)&lt;/a&gt;&lt;a href=&quot;https://github.com/jantimon/html-webpack-harddisk-plugin#basic-usage&quot;&gt;(2)&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;environment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;@rails/webpacker&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HtmlWebpackPlugin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;html-webpack-plugin&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HtmlWebpackHarddiskPlugin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;html-webpack-harddisk-plugin&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;environment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HtmlWebpackPlugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;alwaysWriteToDisk&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;environment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;html-harddisk&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HtmlWebpackHarddiskPlugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;environment&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/leonelgalan/rails-api-webpacker-demo/commit/a8fad1d0b8ae0a356910de492d412493a7305f7f&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a8fad1d&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;setup-rails-to-serve-the-html-generated-by-webpack&quot;&gt;Setup Rails to Serve the HTML Generated by Webpack&lt;/h3&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rails generate controller pages index
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Rewrite the pages controller to:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Inherit from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ActionController::Base&lt;/code&gt;. Because this is an API app, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ApplicationController&lt;/code&gt; inherits from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ActionController::API&lt;/code&gt; instead&lt;/li&gt;
+  &lt;li&gt;Have &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:index&lt;/code&gt; render the file generated by webpack&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;PagesController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ActionController&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Base&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;index&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;render&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;file: &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'public/packs/index.html'&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Remove  the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;get 'pages/index'&lt;/code&gt; added to routes (&lt;em&gt;config/routes.rb&lt;/em&gt;) and add:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;root&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'pages#index'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;as: :pages_index&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'*path'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;to: &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'pages#index'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/leonelgalan/rails-api-webpacker-demo/commit/6ff32b0388e3044a51b443b68750fec4fddfae57&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;6ff32b0&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
+
+&lt;p&gt;Run both commands in different terminals:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;webpack-dev-server
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rails server
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Open &lt;em&gt;http://localhost:3000/&lt;/em&gt; and you’ll see both: “Hello React” in the body and “Hello World from Webpacker” in the browser’s console.&lt;/p&gt;
+
+&lt;p&gt;I’ve published this on Github at &lt;a href=&quot;https://github.com/leonelgalan/rails-api-webpacker-demo&quot;&gt;leonelgalan/rails-api-webpacker-demo&lt;/a&gt; and deployed to Heroku as &lt;a href=&quot;https://ancient-falls-96742.herokuapp.com/&quot;&gt;ancient-falls-96742.herokuapp.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;small&gt;
+  Photo by &lt;a href=&quot;https://unsplash.com/photos/r8cwrYe40rU&quot;&gt;Erfan Moradi&lt;/a&gt;
+&lt;/small&gt;&lt;/p&gt;</content><author><name>Leonel Galán</name></author><category term="rails" /><category term="webpack" /><summary type="html">It appears you can not use --api and --webpack=react together when creating a new Rails App. It’s a shame, because having Rails handle the backend and React, or other JS framework, handle the frontend is a common setup. But it is possible to add webpacker to an api App and use HtmlWebpackPlugin to serve the webpack bundles.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://leonelgalan.com/assets/images/posts/erfan-moradi-r8cwrYe40rU-unsplash.jpg" /><media:content medium="image" url="https://leonelgalan.com/assets/images/posts/erfan-moradi-r8cwrYe40rU-unsplash.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Rubocop’s `–auto-gen-config`</title><link href="https://leonelgalan.com/2020/02/26/rubocops-auto-gen-config.html" rel="alternate" type="text/html" title="Rubocop's `--auto-gen-config`" /><published>2020-02-26T16:00:00+00:00</published><updated>2020-02-26T16:00:00+00:00</updated><id>https://leonelgalan.com/2020/02/26/rubocops-auto-gen-config</id><content type="html" xml:base="https://leonelgalan.com/2020/02/26/rubocops-auto-gen-config.html">&lt;p&gt;I’ve always been fascinated with linters, code formatters and other static analysis tools. For Ruby, &lt;a href=&quot;https://www.rubocop.org/&quot;&gt;Rubocop&lt;/a&gt; is king, it will enforce many of the guidelines outlined in the community’s &lt;a href=&quot;https://rubystyle.guide/&quot;&gt;Ruby Style Guide&lt;/a&gt;, but it’s flexible enough for you to decide how to write your code. Setting up Rubocop when first starting a project allows you to quickly fix all the initial offenses (150+ for a vanilla Rails installation, see below) and analyze your code constantly (on
+save, on commit, before accepting a pull requests) to keep your project offense free.&lt;/p&gt;
+
+&lt;div class=&quot;jekyll-twitter-plugin&quot;&gt;&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Looking for a way to increase your engineering team&amp;#39;s velocity? &lt;br /&gt;&lt;br /&gt;Install a linter and stop arguing in PRs about code formatting/style.&lt;/p&gt;&amp;mdash; Brandon ✌︎(&amp;#39;ω&amp;#39;)✌︎ (@BrandonMathis) &lt;a href=&quot;https://twitter.com/BrandonMathis/status/1232371983234600960?ref_src=twsrc%5Etfw&quot;&gt;February 25, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;/div&gt;
+
+&lt;p&gt;A friend tweeted the above recently and he’s right; I’ve spent countless hours debating: single vs. double quotes and spaces vs. tabs. But it really doesn’t matter, let’s write the code however we like and have a tool like Rubocop enforce the guidelines we’ve agreed beforehand.&lt;/p&gt;
+
+&lt;p&gt;I’ve been out of consulting for almost 5 years now, so I don’t get to start new Rails apps every couple of months. I created one today, to follow along a graphql tutorial (future blog post, maybe?) and stumble upon a feature from Rubocop I didn’t know: auto generate configuration. Let’s explore it together!&lt;/p&gt;
+
+&lt;h2 id=&quot;tutorial&quot;&gt;Tutorial&lt;/h2&gt;
+
+&lt;h3 id=&quot;setup-and-defaults&quot;&gt;Setup and Defaults&lt;/h3&gt;
+
+&lt;p&gt;Make sure you have installed your desired versions of both Ruby and Rails installed. At the time of this writing I wanted the latest 2.6 ruby and the latest Rails, which correspond to the versions shown below:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ruby &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
+ruby 2.6.5p114 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;2019-10-01 revision 67812&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;x86_64-darwin19]
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;rails &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
+Rails 6.0.2.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Create a new Rails app and get inside the newly created directory:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rails new rubocop-app-demo
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;rubocop-app-demo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Open the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt; and add &lt;em&gt;rubocop&lt;/em&gt; and &lt;em&gt;rubocop-rails&lt;/em&gt; inside a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:development&lt;/code&gt; group and add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;require: false&lt;/code&gt; to both lines according to the gems’ documentation &lt;a href=&quot;https://github.com/rubocop-hq/rubocop#installation&quot;&gt;(1)&lt;/a&gt;&lt;a href=&quot;https://github.com/rubocop-hq/rubocop-rails#installation&quot;&gt;(2)&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;group&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:development&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# ...&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'rubocop'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;require: &lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;false&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'rubocop-rails'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;require: &lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;false&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Running rubocop without an explicit configuration (default) results in 172 offenses in 40 files:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;rubocop &lt;span class=&quot;nt&quot;&gt;--format&lt;/span&gt; offenses
+ 40/40 files |&lt;span class=&quot;o&quot;&gt;==========================&lt;/span&gt; 100 &lt;span class=&quot;o&quot;&gt;===========================&amp;gt;&lt;/span&gt;| Time: 00:00:00
+
+55   Style/StringLiterals
+40   Layout/LineLength
+39   Style/FrozenStringLiteralComment
+6    Layout/EmptyLineAfterGuardClause
+6    Style/IfUnlessModifier
+4    Style/Documentation
+3    Style/ExpandPathArguments
+2    Layout/ArgumentAlignment
+2    Layout/SpaceInsideArrayLiteralBrackets
+2    Style/ClassAndModuleChildren
+2    Style/StderrPuts
+2    Style/SymbolArray
+1    Bundler/OrderedGems
+1    Layout/MultilineOperationIndentation
+1    Metrics/AbcSize
+1    Metrics/CyclomaticComplexity
+1    Metrics/MethodLength
+1    Metrics/PerceivedComplexity
+1    Style/PerlBackrefs
+1    Style/RedundantBegin
+1    Style/SpecialGlobalVars
+&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt;
+172  Total
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Not a great start, let’s get this sorted out.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-process&quot;&gt;The Process&lt;/h2&gt;
+
+&lt;p&gt;Rubocop includes a tool to auto generate a configuration . Simply pass the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--auto-gen-config&lt;/code&gt; flag to generate a configuration acting as a TO DO list:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;rubocop &lt;span class=&quot;nt&quot;&gt;--auto-gen-config&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;rubocop &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+The following cops were added to RuboCop, but are not configured. Please &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;Enabled to either &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; or &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;your &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;.rubocop.yml&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; file:
+ - Style/HashEachMethods
+ - Style/HashTransformKeys
+ - Style/HashTransformValues
+Inspecting 40 files
+......................................
+
+40 files inspected, no offenses detected
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This created two files &lt;em&gt;.rubocop.yml&lt;/em&gt; and &lt;em&gt;.rubocop_todo.yml&lt;/em&gt;. The first is your project’s final configuration file, for now, it simply inherits a temporary configuration from &lt;em&gt;.rubocop_todo.yml&lt;/em&gt; (TO DO from now on). This allows the project to have no offenses. But the point of the TO DO is for us to remove the configuration records one by one as the offenses are removed from the code base or the configuration is moved outside of the TO DO.&lt;/p&gt;
+
+&lt;p&gt;First let’s fix the warnings by enabling the three cops that aren’t configured yet. Add the following to &lt;em&gt;.rubocop.yml&lt;/em&gt;: &lt;a href=&quot;https://github.com/leonelgalan/rubocop-app-demo/tree/4fff12cf06f55c629382f2bdab9a1c62340e4d53&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;4fff12c&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;Style/HashEachMethods&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;Enabled&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+
+&lt;span class=&quot;s&quot;&gt;Style/HashTransformKeys&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;Enabled&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+
+&lt;span class=&quot;s&quot;&gt;Style/HashTransformValues&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;Enabled&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;rubocop &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+Inspecting 40 files
+........................................
+
+40 files inspected, no offenses detected
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now let’s focus on the first entry of the TO DO:&lt;/p&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Offense count: 1&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Cop supports --auto-correct.&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Configuration parameters: TreatCommentsAsGroupSeparators, Include.&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Include: **/*.gemfile, **/Gemfile, **/gems.rb&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;Bundler/OrderedGems&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;Exclude&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Gemfile'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This cop seems like a good idea, as the project grows ordered gems will make the Gemfile easier to read. We also learned that the cop supports auto correct, so simply removing this block from the TO DO and running rubocop autocorrect will remove the offense: &lt;a href=&quot;https://github.com/leonelgalan/rubocop-app-demo/tree/443b28292b85d7eb6e421a7781da7bd99cb7f4cd&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;443b282&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;rubocop &lt;span class=&quot;nt&quot;&gt;--auto-correct&lt;/span&gt;
+Inspecting 40 files
+C.......................................
+
+Offenses:
+
+Gemfile:39:3: C: &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;Corrected] Bundler/OrderedGems: Gems should be sorted &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;an alphabetical order within their section of the Gemfile. Gem listen should appear before web-console.
+  gem &lt;span class=&quot;s1&quot;&gt;'listen'&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;'&amp;gt;= 3.0.5'&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;'&amp;lt; 3.2'&lt;/span&gt;
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+40 files inspected, 1 offense detected, 1 offense corrected
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;rubocop &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+Inspecting 40 files
+........................................
+
+40 files inspected, no offenses detected
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now onto the next block:&lt;/p&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Offense count: 2&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Cop supports --auto-correct.&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Configuration parameters: EnforcedStyle, IndentationWidth.&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# SupportedStyles: with_first_argument, with_fixed_indentation&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;Layout/ArgumentAlignment&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;Exclude&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;bin/webpack'&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;bin/webpack-dev-server'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We do want the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Layout/ArgumentAlignment&lt;/code&gt; cop, but files in the &lt;em&gt;bin/&lt;/em&gt; folder are usually automatically generated, and to avoid a constant back and forth, it’s probably better to avoid &lt;em&gt;bin/&lt;/em&gt; when running all the cops (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AllCops&lt;/code&gt;). Add the following to your project’s Rubocop configuration (&lt;em&gt;.rubocop.yml&lt;/em&gt;) and remove the block from the TO DO. While we are here, let’s also ignore &lt;em&gt;node_modules/&lt;/em&gt;, I remember having some issues with ruby files inside node-sass. &lt;a href=&quot;https://github.com/leonelgalan/rubocop-app-demo/tree/9e0f61da6987e9fab2bb46a2b7d199220bdb391a&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;9e0f61d&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;AllCops&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;Exclude&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;bin/*&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;node_modules/**/*&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Similarly, remove all other cops’ configurations that deal only with files inside the bin/ folder (8 cops and some files inside a ninth).&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;rubocop &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+Inspecting 32 files
+................................
+
+32 files inspected, no offenses detected
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Cop by cop, decide what you want to do with each:s&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Remove the excludes (so offenses are corrected or pop up)&lt;/li&gt;
+  &lt;li&gt;Move the excludes to &lt;em&gt;.rubocop.yml&lt;/em&gt; if you don’t want to deal with a cop/file combination.&lt;/li&gt;
+  &lt;li&gt;Completely disabling a cop, by setting &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Enabled: false&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Ignore the custom configuration in the TO DO and fallback to the default&lt;/li&gt;
+  &lt;li&gt;Change the recommended configuration.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I ended up removing the excludes for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Layout/SpaceInsideArrayLiteralBrackets&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Style/SpecialGlobalVars&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Style/StringLiterals&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Style/SymbolArray&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Moving the excludes for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Style/ClassAndModuleChildren&lt;/code&gt;, because the two files were created by Rails and I don’t plan to touch them much: &lt;em&gt;test/channels/application_cable/connection_test.rb&lt;/em&gt; and &lt;em&gt;test/test_helper.rb&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Disabling &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Style/Documentation&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Style/FrozenStringLiteralComment&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ignoring the configuration for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Metrics/AbcSize&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Metrics/CyclomaticComplexity&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Metrics/MethodLength&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Metrics/PerceivedComplexity&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Changing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Layout/LineLength&lt;/code&gt;’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Max&lt;/code&gt; to 120. To match the rulers in my editor.&lt;/p&gt;
+
+&lt;p&gt;After going clearing the TO DO, remove the file and the line inheriting from it in your project’s configuration. Run rubocop’s autocorrect again: &lt;a href=&quot;https://github.com/leonelgalan/rubocop-app-demo/tree/32f03b8ad68df1be331692cad713d657900ca774&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;32f03b8&lt;/code&gt;&lt;/a&gt; &lt;a href=&quot;https://github.com/leonelgalan/rubocop-app-demo/tree/6814cc7a5ed05bff08beb74556ec7d2adbb26545&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;6814cc7&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;rubocop &lt;span class=&quot;nt&quot;&gt;--auto-correct&lt;/span&gt;
+Inspecting 32 files
+C.............C..........C.C.CC.
+
+Offenses:
+
+Gemfile:33:28: C: &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;Corrected] Style/SymbolArray: Use %i or %I &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;an array of symbols.
+  gem &lt;span class=&quot;s1&quot;&gt;'byebug'&lt;/span&gt;, platforms: &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;:mri, :mingw, :x64_mingw]
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+...
+
+&lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;/channels/application_cable/connection_test.rb:1:9: C: &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;Corrected] Style/StringLiterals: Prefer single-quoted strings when you don&lt;span class=&quot;s1&quot;&gt;'t need string interpolation or special symbols.
+require &quot;test_helper&quot;
+        ^^^^^^^^^^^^^
+
+32 files inspected, 17 offenses detected, 17 offenses corrected
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;the-result&quot;&gt;The Result&lt;/h2&gt;
+
+&lt;p&gt;All 17 offenses were corrected, let’s do it one more time to have a clean result:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;rubocop &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+Inspecting 32 files
+................................
+
+32 files inspected, no offenses detected
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;For this project, based on my preferences, the final &lt;em&gt;.rubocop.yml&lt;/em&gt; file looks like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;AllCops&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;Exclude&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;bin/**&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;node_modules/**/*&lt;/span&gt;
+
+&lt;span class=&quot;s&quot;&gt;Style/HashEachMethods&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;Enabled&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+
+&lt;span class=&quot;s&quot;&gt;Style/HashTransformKeys&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;Enabled&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+
+&lt;span class=&quot;s&quot;&gt;Style/HashTransformValues&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;Enabled&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+
+&lt;span class=&quot;s&quot;&gt;Style/Documentation&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;Enabled&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;false&lt;/span&gt;
+
+&lt;span class=&quot;s&quot;&gt;Style/FrozenStringLiteralComment&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;Enabled&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;false&lt;/span&gt;
+
+&lt;span class=&quot;s&quot;&gt;Style/ClassAndModuleChildren&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;Exclude&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;test/channels/application_cable/connection_test.rb&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;test/test_helper.rb&lt;/span&gt;
+
+&lt;span class=&quot;s&quot;&gt;Layout/LineLength&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;Max&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;120&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;small&gt;
+  Photo by &lt;a href=&quot;https://unsplash.com/photos/jHZ70nRk7Ns&quot;&gt;Lenny Kuhne&lt;/a&gt; | “gray vehicle being fixed inside factory using robot machines”
+&lt;/small&gt;&lt;/p&gt;</content><author><name>Leonel Galán</name></author><category term="ruby" /><category term="rails" /><summary type="html">I’ve always been fascinated with linters, code formatters and other static analysis tools. For Ruby, Rubocop is king, it will enforce many of the guidelines outlined in the community’s Ruby Style Guide, but it’s flexible enough for you to decide how to write your code. Setting up Rubocop when first starting a project allows you to quickly fix all the initial offenses (150+ for a vanilla Rails installation, see below) and analyze your code constantly (on save, on commit, before accepting a pull requests) to keep your project offense free.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://leonelgalan.com/assets/images/posts/lenny-kuhne-jHZ70nRk7Ns-unsplash.jpg" /><media:content medium="image" url="https://leonelgalan.com/assets/images/posts/lenny-kuhne-jHZ70nRk7Ns-unsplash.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">What’s New: Never Stop Learning</title><link href="https://leonelgalan.com/2020/01/23/whats-new-never-stop-learning.html" rel="alternate" type="text/html" title="What's New: Never Stop Learning" /><published>2020-01-23T16:00:00+00:00</published><updated>2020-01-23T16:00:00+00:00</updated><id>https://leonelgalan.com/2020/01/23/whats-new-never-stop-learning</id><content type="html" xml:base="https://leonelgalan.com/2020/01/23/whats-new-never-stop-learning.html">&lt;p&gt;A couple of weeks back I purchase an &lt;a href=&quot;https://egghead.io/&quot;&gt;egghead.io&lt;/a&gt; subscription. If you don’t know
+what egghead.io is, they explain it well on their homepage:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h3 id=&quot;learn-the-best-javascript-tools-and-frameworks-from-industry-pros&quot;&gt;Learn the best JavaScript tools and frameworks from industry pros.&lt;/h3&gt;
+
+  &lt;p&gt;Video tutorials for badass web developers.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Ruby is my strong suit, just see my &lt;a href=&quot;/os&quot;&gt;open source collaborations&lt;/a&gt;. But lately, I’ve been
+working more and more with JavaScript, mostly React. I’ve done well enough, but I could use some help, especially
+from &lt;em&gt;industry pros&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;So far, I’ve been satisfied with the platform and content, I’ve completed these courses:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;How to Write Open Source Javascript Library&lt;/li&gt;
+  &lt;li&gt;Advance JavaScript Foundations&lt;/li&gt;
+  &lt;li&gt;Up and Running with TypeScript&lt;/li&gt;
+  &lt;li&gt;Use TypeScript to develop React Applications&lt;/li&gt;
+  &lt;li&gt;Build Custom CLI Tooling with oclif and TypeScript&lt;/li&gt;
+  &lt;li&gt;Design Systems with React and TypeScript in Storybook&lt;/li&gt;
+  &lt;li&gt;Reduce Redux Boilerplate with Redux-Actions&lt;/li&gt;
+  &lt;li&gt;Introduction to State Machines Using XState&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;After I’m done with egghead.io, I plan to move to &lt;a href=&quot;https://testingjavascript.com/&quot;&gt;TESTING JAVASCRIPT.com&lt;/a&gt; which is
+created by the same crowd, but hyper-focused on JavaScript testing.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;small&gt;
+  Photo by &lt;a href=&quot;https://unsplash.com/photos/OQSCtabGkSY&quot;&gt;Jessica Ruscello&lt;/a&gt; | “assorted book lot”
+&lt;/small&gt;&lt;/p&gt;</content><author><name>Leonel Galán</name></author><category term="whats-new" /><summary type="html">A couple of weeks back I purchase an egghead.io subscription. If you don’t know what egghead.io is, they explain it well on their homepage:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://leonelgalan.com/assets/images/posts/jessica-ruscello-OQSCtabGkSY-unsplash.jpg" /><media:content medium="image" url="https://leonelgalan.com/assets/images/posts/jessica-ruscello-OQSCtabGkSY-unsplash.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">What’s New: R and Python</title><link href="https://leonelgalan.com/2018/04/30/whats-new-r-and-python.html" rel="alternate" type="text/html" title="What's New: R and Python" /><published>2018-04-30T04:00:00+00:00</published><updated>2018-04-30T04:00:00+00:00</updated><id>https://leonelgalan.com/2018/04/30/whats-new-r-and-python</id><content type="html" xml:base="https://leonelgalan.com/2018/04/30/whats-new-r-and-python.html">&lt;p&gt;Epifany recently hired a couple of Data Scientists. I decided to learn enough R
+and Python to be dangerous. I’ve always wanted to say that. The truth is, I’m
+just getting familiar with the two ecosystems to better support my team.&lt;/p&gt;
+
+&lt;h2 id=&quot;r&quot;&gt;R&lt;/h2&gt;
+&lt;h3 id=&quot;learning-resources&quot;&gt;Learning Resources&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;Learn Data Science Online&quot;&gt;DataCamp&lt;/a&gt;: &lt;em&gt;Learn Data Science Online&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.dataquest.io/&quot;&gt;Dataquest&lt;/a&gt;: &lt;em&gt;Become a Data Scientist&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I tried DataCamp for a a couple of hours. I thought it was great and it taught
+me fundamentals that allowed me to further explore R, but (there is always a
+but), I felt it moved too slow for developers trying to learn R.&lt;/p&gt;
+
+&lt;h3 id=&quot;r-packages&quot;&gt;R Packages&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.rplumber.io/&quot;&gt;Plumber&lt;/a&gt;: &lt;em&gt;An R package that converts your
+existing R code to a web API using a handful of special one-line comments&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://shiny.rstudio.com/&quot;&gt;Shiny&lt;/a&gt;: &lt;em&gt;Shiny is an R package that makes it easy
+to build interactive web apps straight from R.&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.tidyverse.org/&quot;&gt;Tidyverse&lt;/a&gt;: &lt;em&gt;The tidyverse is an opinionated
+collection of R packages designed for data science. All packages share an
+underlying design philosophy, grammar, and data structures.&lt;/em&gt; They had me at
+&lt;em&gt;opinionated&lt;/em&gt;, coming from a strong Rails background I want someone to take lead
+and show us a way to do things, if we like it we use it, if not we keep looking.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://rstudio.github.io/leaflet/&quot;&gt;Leaflet for R&lt;/a&gt;: &lt;em&gt;This R package makes it
+easy to integrate and control Leaflet maps in R&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;other&quot;&gt;Other&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://jef.works/R-style-guide/&quot;&gt;R Style Guide&lt;/a&gt; by the talented
+&lt;a href=&quot;http://jef.works/&quot;&gt;Jean Fan&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://atom.io/packages/hydrogen&quot;&gt;Hydrogen&lt;/a&gt;: &lt;em&gt;Hydrogen is an interactive
+coding environment that supports Python, R, JavaScript and other Jupyter
+kernels.&lt;/em&gt; I’ve been a fan of “notebooks” (the &lt;a href=&quot;http://jupyter.org/&quot;&gt;jupyter&lt;/a&gt;
+kind), but the closest I had so far was
+&lt;a href=&quot;https://runkit.com/leonelgalan/&quot;&gt;RunKit&lt;/a&gt;. Now I can run R, Python and
+JavaScript, as notebooks within Atom (See screenshot below). The result of each
+cell is shown within the code.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/201804_exampleR.png&quot; alt=&quot;example.R&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;python&quot;&gt;Python&lt;/h2&gt;
+
+&lt;p&gt;I’ve done small bits of Python and even played with
+&lt;a href=&quot;https://pandas.pydata.org/&quot;&gt;pandas&lt;/a&gt; before, but only now, after playing with R
+I get it. I’m currently replicating all my R experiments in Python, by the end
+of it I expect to choose one and expand my Data Science skills further.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;small&gt;
+  Photo by &lt;a href=&quot;https://unsplash.com/photos/vpR0oc4X8Mk&quot;&gt;Samuel Zeller&lt;/a&gt; | “Binders on a shelf.”
+&lt;/small&gt;&lt;/p&gt;</content><author><name>Leonel Galán</name></author><category term="whats-new" /><summary type="html">Epifany recently hired a couple of Data Scientists. I decided to learn enough R and Python to be dangerous. I’ve always wanted to say that. The truth is, I’m just getting familiar with the two ecosystems to better support my team.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://leonelgalan.com/assets/images/posts/samuel-zeller-360588-unsplash.jpg" /><media:content medium="image" url="https://leonelgalan.com/assets/images/posts/samuel-zeller-360588-unsplash.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Hello World!</title><link href="https://leonelgalan.com/2018/04/20/hello-world.html" rel="alternate" type="text/html" title="Hello World!" /><published>2018-04-20T23:00:00+00:00</published><updated>2018-04-20T23:00:00+00:00</updated><id>https://leonelgalan.com/2018/04/20/hello-world</id><content type="html" xml:base="https://leonelgalan.com/2018/04/20/hello-world.html">&lt;p&gt;Every blog starts with a “Hello World!” right?&lt;/p&gt;
+
+&lt;p&gt;I don’t intend to write lengthy posts or even post regularly. I might as well be using &lt;a href=&quot;https://twitter.com/leonelgalan&quot;&gt;
+  &lt;span class=&quot;icon icon--twitter&quot;&gt;&lt;svg viewBox=&quot;0 0 16 16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; stroke-linejoin=&quot;round&quot; stroke-miterlimit=&quot;1.414&quot;&gt;&lt;path d=&quot;M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.37-1.337.64-2.085.79-.598-.64-1.45-1.04-2.396-1.04-1.812 0-3.282 1.47-3.282 3.28 0 .26.03.51.085.75-2.728-.13-5.147-1.44-6.766-3.42C.83 2.58.67 3.14.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.41-.02-.61-.058.42 1.304 1.63 2.253 3.07 2.28-1.12.88-2.54 1.404-4.07 1.404-.26 0-.52-.015-.78-.045 1.46.93 3.18 1.474 5.04 1.474 6.04 0 9.34-5 9.34-9.33 0-.14 0-.28-.01-.42.64-.46 1.2-1.04 1.64-1.7z&quot; fill-rule=&quot;nonzero&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;
+  &lt;span class=&quot;label&quot;&gt;Twitter&lt;/span&gt;
+&lt;/a&gt;
+ for the type of post I have in mind, but I like the idea of having my posts under &lt;a href=&quot;https://github.com/leonelgalan&quot;&gt;
+  &lt;span class=&quot;icon icon--github&quot;&gt;&lt;svg viewBox=&quot;0 0 16 16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; stroke-linejoin=&quot;round&quot; stroke-miterlimit=&quot;1.414&quot;&gt;&lt;path d=&quot;M8 0C3.58 0 0 3.582 0 8c0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.09-.202-.36-1.015.07-2.117 0 0 .67-.215 2.2.82.64-.178 1.32-.266 2-.27.68.004 1.36.092 2 .27 1.52-1.035 2.19-.82 2.19-.82.43 1.102.16 1.915.08 2.117.51.56.82 1.274.82 2.147 0 3.073-1.87 3.75-3.65 3.947.28.24.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.14.46.55.38C13.71 14.53 16 11.53 16 8c0-4.418-3.582-8-8-8&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;
+  &lt;span class=&quot;label&quot;&gt;source control&lt;/span&gt;
+&lt;/a&gt;
+ and the possibility of including code snippets when necessary.&lt;/p&gt;
+
+&lt;p&gt;I’m particularly excited about a series of posts called &lt;em&gt;What’s New?&lt;/em&gt;, in
+which I’ll share the new technologies, languages, or tools I constantly
+discover.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;small&gt;
+  Photo by &lt;a href=&quot;https://unsplash.com/photos/9MeKK9875vI&quot;&gt;Arturo Rivera&lt;/a&gt; | Antigua
+  Guatemala, Guatemala
+&lt;/small&gt;&lt;/p&gt;</content><author><name>Leonel Galán</name></author><summary type="html">Every blog starts with a “Hello World!” right?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://leonelgalan.com/assets/images/posts/arturo-rivera-537264-unsplash.jpg" /><media:content medium="image" url="https://leonelgalan.com/assets/images/posts/arturo-rivera-537264-unsplash.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
