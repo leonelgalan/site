@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "New Hardware"
-date: 2020-04-24 12:00:00 -0400
+date: 2021-03-23 12:00:00 -0400
 image: /assets/images/posts/raul-per-e-7GIjoIpbcuU-unsplash.jpg
 tags:
   - short
